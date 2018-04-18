@@ -1,0 +1,7 @@
+<% @muffins.each do |muffins| %>
+    <h1><%= muffins[:name] %></h1>
+    <h3><%=muffins[:description] %></h3>
+    <h4><%=muffins[:price] %></h4>
+     <div><img src="<%=muffins[:image]%>"height="300" 
+    width="300"></div>
+<% end %>
