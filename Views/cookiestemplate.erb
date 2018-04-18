@@ -1,0 +1,7 @@
+<% @cookies.each do |cookies| %>
+    <h1><%= cookies[:name] %></h1>
+    <h3><%=cookies[:description] %></h3>
+    <h4><%=cookies[:price] %></h4>
+     <div><img src="<%=cookies[:image]%>"height="300" 
+    width="300"></div>
+<% end %>
