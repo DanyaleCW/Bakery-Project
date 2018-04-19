@@ -8,7 +8,7 @@ get '/' do
     erb :mainlayout
 end   
  
-get '/cake' do
+get '/cakes' do
     "Danyale loves cake"
     @cake = [{name: "Double Chocolate Cake",
     description:"Chocolate cake danish jujubes topping croissant marshmallow cookie soufflé tart. Bear claw jujubes marshmallow wafer cake apple pie lemon drops icing jelly. Cotton candy cake danish soufflé lollipop bear claw icing. Topping sweet croissant.", price:"if you have to ask.....", image: "https://img.taste.com.au/KoghGSzS/w643-h428-cfill-q90/taste/2016/11/homemade-chocolate-cake-85524-1.jpeg"},
@@ -35,6 +35,49 @@ get '/muffins' do
     erb :muffinstemplate, :layout => :muffinslayout
 end 
 
+get '/contact' do
+    erb :contacttemplate
+end   
+
+post '/contact' do
+
+    @email = params[:email]
+    @opinion = params[:opinion]
+
+from = Email.new(email: 'thecustomer@gmail.com')
+to = Email.new(email: @email)
+subject = 'We want your opinion'
+content = Content.new(type: 'text/plain', value: @opinion)
+mail = Mail.new(from, subject, to, content)
+
+sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
+response = sg.client.mail._('send').post(request_body: mail.to_json)
+
+puts response.status_code
+   puts ENV['SENDGRID_API_KEY']
+end   
+
+get '/special' do
+    erb :occasiontemplate
+end   
+
+post '/specialoccasions' do
+
+    @email = params[:email]
+    @specialoccassion = params[:specialoccassion]
+
+from = Email.new(email: 'thecustomer@gmail.com')
+to = Email.new(email: @email)
+subject = 'I want a cake for my special day'
+content = Content.new(type: 'text/plain', value: @specialoccassion)
+mail = Mail.new(from, subject, to, content)
+
+sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
+response = sg.client.mail._('send').post(request_body: mail.to_json)
+
+puts response.status_code
+   puts ENV['SENDGRID_API_KEY']
+end   
 # get '/playaround' do 
 #  @cookie = Cookie.new("Double Chocolate Chunk", "The best Double Chocolate Chip cookie you will ever try.", 2.50)
 
