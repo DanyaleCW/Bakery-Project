@@ -1,9 +1,9 @@
 
 <% @cake.each do |cake| %>
     <h1><%= cake[:name] %></h1>
-    <h3><%=cake[:description] %></h3>
-    <h4><%=cake[:price] %></h4>
-     <div><img src="<%=cake[:image]%>"height="300" 
+    <div><img src="<%=cake[:image]%>"height="300" 
     width="300"></div>
+    <h3><%=cake[:description] %></h3>
+    <h4>Price: <%=cake[:price] %></h4>
 <% end %>
 
