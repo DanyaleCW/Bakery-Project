@@ -5,40 +5,21 @@ body {
     background-color: #d3f1f0;
 }
 
-#flip {
-    display: inline-block;
-    vertical-align: top;
-    transform: scaleX(-1);
-    -ms-filter: fliph;
-    filter: fliph;
-}
- 
-/* span, .logo {
-    font-size: 90px;
-} */
-
 .nav {
-    float: right;
-    overflow: hidden;
-    background-color: #d6d17a;
+    background-color: #ddd650;
     color: #fafafa;
     padding: 14px 16px;
-   
     font-size: 37px;
 }
 
-.nav1 {
-    text-align: center;
-    overflow: hidden;
-    background-color: #d6d17a;
-    color: #fafafa;
-    padding: 14px 16px;
-    font-size: 37px;
+a. hover {
+    background-color: #295c8a;
 }
+
+
 
 a {
- text-decoration: none;
- color: #295c8a;
+    text-decoration: none;
 }
 
 h1 {
@@ -59,6 +40,11 @@ h1 {
     border-bottom: 2px solid black;
 }
 
+.special {
+    background-color:#9e687e;
+    color: #fafafa;
+}
+
 footer {
     background-color: #ad8e5b;
     padding-top: px;
@@ -66,7 +52,27 @@ footer {
     text-align: center;
 }
 
+#pie {
+    text-align: center;
+}
 
+
+.pie {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+#cupcake {
+    text-align: center;
+}
+
+.cupcake {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
 
 .footer {
     color: #624970;
