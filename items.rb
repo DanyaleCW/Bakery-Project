@@ -1,38 +1,42 @@
 class BakeryItems
-    attr_accessor :name, :description, :price
+    attr_accessor :name, :description, :price, :image
 
-        def initialize(name, description, price)
+        def initialize(name, description, price, image)
             @name = name
             @description = description
             @price = price
+            @image = image
         end 
 end         
 
-        class Cookie < BakeryItems
-            def initialize(name, description, price)
-                super
-            end
-        end    
+          
 
         class Cake < BakeryItems
-            def initialize(name, description, price)
-                super
+            def initialize(name, description, price, image)
+            @name = name
+            @description = description
+            @price = price
+            @image = image
             end
-        end    
+        end 
+           
+
+        class Cookie < BakeryItems
+            def initialize(name, description, price, image)
+            @name = name
+            @description = description
+            @price = price
+            @image = image
+            end
+        end 
+        
 
         class Muffin < BakeryItems
-            def initialize(name, description, price)
-                super
+            def initialize(name, description, price, image)
+            @name = name
+            @description = description
+            @price = price
+            @image = image
             end
         end                   
 
-cookie = Cookie.new("Double Chocolate Chunk", "The best Double Chocolate Chip cookie you will ever try.", 2.50)
-
-
-cake = Cake.new("Chocolate Devil", "The best Double Chocolate Chip cake you will ever try.", 6.00)
-muffin = Muffin.new("Double Chocolate Chip", "The best Double Chocolate Chip muffin you will ever try.", 3.00)
-
-
-puts cookie.name
-puts cake.description
-puts muffin.price
