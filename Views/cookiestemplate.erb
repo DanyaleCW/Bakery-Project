@@ -1,8 +1,11 @@
+<h1>Cookies</h1>
+    <div><blockquote class="quotes">"I usually travel with a posse. I roll          deep. I travel like a rapper, but without the artillery. We don't           carry guns, we carry cookies." ~ Gabriel Iglesias</blockquote>
+    </div>
+
 <% @allcookie.each do |cookie| %>
-    <h1><%= cookie.name %></h1>
+    <h2><%= cookie.name %></h2>
     <div><img src="<%=cookie.image%>"height="300" 
     width="300"></div>
     <h3><%=cookie.description %></h3>
     <h4>Price: <%=cookie.price %></h4>
-     
 <% end %>
