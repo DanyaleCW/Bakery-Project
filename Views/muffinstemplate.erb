@@ -1,8 +1,11 @@
+
+<h1>Muffins</h1>
+    <div><blockquote class="quotes">"Give me liberty or give me a muffin!" ~        Cambria Mochrie</blockquote>
+    </div>
 <% @allmuffin.each do |muffin| %>
-    <h1><%= muffin.name %></h1>
+    <h2><%= muffin.name %></h2>
     <div><img src="<%=muffin.image%>"height="300" 
     width="300"></div>
     <h3><%=muffin.description %></h3>
     <h4>Price: <%= muffin.price %></h4>
-     
 <% end %>

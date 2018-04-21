@@ -1,7 +1,10 @@
 
-
+<h1>Cakes</h1>
+    <div>
+        <blockquote class="quotes">"My policy on cake is pro having it and pro eating it." ~ Bolanile Johnson</blockquote>
+    </div>  
 <% @allcake.each do |cake| %>
-    <h1><%= cake.name %></h1>
+    <h2><%= cake.name %></h2>
     <div><img src="<%=cake.image%>"height="300" 
     width="300"></div>
     <h3><%=cake.description %></h3>

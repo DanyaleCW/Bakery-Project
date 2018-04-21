@@ -5,7 +5,6 @@ include SendGrid
 
 require_relative './items.rb'
 
-
 set :public_folder, File.dirname(__FILE__)
 
 get '/' do
@@ -18,7 +17,7 @@ get '/cake' do
     @cakethree = Cake.new("Plain Vanilla", "I love halvah vanilla cake I love caramels tiramisu bear claw danish sweet roll. Donut I love candy marzipan fruitcake wafer sesame snaps. Sweet roll jelly beans tootsie roll I love dragée jelly-o.", "less than it is worth", "https://s3-prod-calcmenu.unileversolutions.com/public_picture/picOriginal/P121142214121058_1.jpg")
     puts @cake.name
     @allcake = [@cake, @caketwo, @cakethree]
-        erb :caketemplate, :layout => :cakelayout
+        erb :caketemplate, :layout => :main1layout
 end 
 
 
@@ -32,7 +31,7 @@ get '/cookie' do
 
 
     @allcookie = [@cookie, @cookietwo, @cookiethree]
-     erb :cookiestemplate, :layout => :cookieslayout
+     erb :cookiestemplate, :layout => :main1layout
 end 
 
 get '/muffin' do
@@ -42,9 +41,8 @@ get '/muffin' do
 
     @muffinthree = Muffin.new("Kiwi", "I love halvah kiwi muffin I love caramels tiramisu bear claw danish sweet roll. Donut I love candy marzipan fruitcake wafer sesame snaps. Sweet roll jelly beans tootsie roll I love dragée jelly-o.", "less than it is worth", "https://i1.wp.com/www.theconfidencekitchen.com/wp-content/uploads/2015/05/kiwi-fruit-muffin-recipe-dark-chocolate-cacao-nibs-orange-zest-vegan-gluten-free-9-min1.jpg?fit=640%2C428")
 
-    puts @muffin.name
     @allmuffin = [@muffin, @muffintwo, @muffinthree]
-    erb :muffinstemplate, :layout => :muffinslayout
+    erb :muffinstemplate, :layout => :main1layout
 end 
  
 get '/pie' do
@@ -65,7 +63,7 @@ post '/contact' do
 @opinion = params[:opinion]
 
 from = Email.new(email: 'thecustomer@gmail.com')
-to = Email.new(email: @email)
+to = Email.new(email: 'tianasbakery@gmail.com')
 subject = 'We want your opinion'
 content = Content.new(type: 'text/plain', value: @opinion)
 mail = Mail.new(from, subject, to, content)
@@ -86,8 +84,8 @@ post '/special' do
 @email = params[:email]
 @specialoccassion = params[:specialoccassion]
 
-from = Email.new(email: 'thecustomer@gmail.com')
-to = Email.new(email: @email)
+from = Email.new(email: 'thecustomers@gmail.com')
+to = Email.new(email: 'tianabakery@gmail.com')
 subject = 'I want a cake for my special day'
 content = Content.new(type: 'text/plain', value: @specialoccassion)
 mail = Mail.new(from, subject, to, content)
