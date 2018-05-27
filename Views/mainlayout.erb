@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/Public/main.css">
+    <link rel="stylesheet" type="text/css" href="Public/main.css" />
     <title>Byron's Bakery</title>
 </head>
 <body>
@@ -18,13 +18,47 @@
         <a href="http://localhost:4567/contact">Contact</a>
         <a href="http://localhost:4567/special">Special Occasions</a>
     </div>
+ <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+    </ul>
+    <button class="btn btn-danger navbar-btn">Button</button>
+  </div>
+</nav>
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <button class="btn btn-outline-success" type="button">Main button</button>
+    <button class="btn btn-sm btn-outline-secondary" type="button">Smaller button</button>
+  </form>
+</nav>
+
+<button type="button" class="btn btn-outline-primary">Primary</button>
+<button type="button" class="btn btn-outline-secondary">Secondary</button>
+<button type="button" class="btn btn-outline-success">Success</button>
+<button type="button" class="btn btn-outline-danger">Danger</button>
+<button type="button" class="btn btn-outline-warning">Warning</button>
+<button type="button" class="btn btn-outline-info">Info</button>
+<button type="button" class="btn btn-outline-light">Light</button>
+<button type="button" class="btn btn-outline-dark">Dark</button>
+
+   <button type="button" class="btn btn-primary btn-lg">Large button</button>
+<button type="button" class="btn btn-secondary btn-lg">Large button</button>     
+
         <div>
-        <img src="/Public/Images/logo.png" alt="bakery" height="300" width="300">
+        <img src="/Public/Images/logo.png" alt="bakery" height="200" width="200">
         </div>
     <div class="header">     
     <h2>Cookies, Cakes and Pies, Oh My!!!</h2>
     <h3 class="special">This weeks special: French Macarons</h3>
     </div>
+
+    
 
          <%# <div class="container"> %>
             <%# <div> %>
@@ -46,6 +80,6 @@
     <footer>Byron's Bakery, 8956 Eclair Way, Madelaine, N.Y. Phone: 808-867-5309 Email: byronsbakery@butter.com
     <div>Coded and Design by: Code. Design. Surf.</div>
 <footer>
-<script type="text/javascript" src="/Public/main.js"></script>
+<%# <script type="text/javascript" src="/Public/main.js"></script> %>
 </body>
 </html>

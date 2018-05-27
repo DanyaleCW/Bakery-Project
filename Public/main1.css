@@ -1,0 +1,50 @@
+body {
+    
+}
+
+.nav {
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    /* padding: 10px;  */
+    overflow: hidden;
+    border: 3px solid #3a261e;
+    background-color: #e6e2e0;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    vertical-align: top;
+    text-align: justify;
+    padding-right: 40px;
+}
+
+/* 
+div.desc {
+    padding: 15px;
+    text-align: center;
+} */
+
+#pie,
+#cupcake {
+    text-align: center;
+    background-color: aliceblue !important;
+}
+
+.pie,
+.cupcake {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}

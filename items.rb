@@ -7,9 +7,7 @@ class BakeryItems
             @price = price
             @image = image
         end 
-end         
-
-          
+end          
 
         class Cake < BakeryItems
             def initialize(name, description, price, image)

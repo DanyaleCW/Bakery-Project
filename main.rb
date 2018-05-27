@@ -5,7 +5,7 @@ include SendGrid
 
 require_relative './items.rb'
 
-set :public_folder, File.dirname(__FILE__)
+set :public_folder, File.dirname(__FILE__) + '/static'
 
 get '/' do
     erb :mainlayout
@@ -63,7 +63,7 @@ post '/contact' do
 @opinion = params[:opinion]
 
 from = Email.new(email: 'thecustomer@gmail.com')
-to = Email.new(email: 'tianasbakery@gmail.com')
+to = Email.new(email: 'bosbakery@gmail.com')
 subject = 'We want your opinion'
 content = Content.new(type: 'text/plain', value: @opinion)
 mail = Mail.new(from, subject, to, content)
@@ -84,8 +84,8 @@ post '/special' do
 @email = params[:email]
 @specialoccassion = params[:specialoccassion]
 
-from = Email.new(email: 'thecustomers@gmail.com')
-to = Email.new(email: 'tianabakery@gmail.com')
+from = Email.new(email: 'thecustomer@gmail.com')
+to = Email.new(email: 'bosbakery@gmail.com')
 subject = 'I want a cake for my special day'
 content = Content.new(type: 'text/plain', value: @specialoccassion)
 mail = Mail.new(from, subject, to, content)
